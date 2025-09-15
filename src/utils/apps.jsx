@@ -3,6 +3,7 @@ import Camera from "../components/Camera";
 import Edge from "../components/Edge";
 import Notepad from "../components/Notepad";
 import Photos from "../components/Photos";
+import Explorer from "../components/Explorer";
 
 const apps = {
   settings: {
@@ -13,7 +14,7 @@ const apps = {
   explorer: {
     name: "File Explorer",
     icon: "/assets/icons/explorer.png",
-    component: () => <p>Explorer Window</p>,
+    component: Explorer,
   },
   camera: {
     name: "Camera",

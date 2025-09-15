@@ -28,7 +28,7 @@ const Desktop = ({ openWindows, setOpenWindows, startMenu, setStartMenu, systemT
     >
       {rightMenu.visibility && <RightMenu x={rightMenu.x} y={rightMenu.y} />}
       <div className="desktop-icons">
-        <div className="thisPC" onClick={() => handleOpenWindow("thisPC")}>
+        <div className="thisPC" onClick={() => handleOpenWindow("explorer")}>
           <img src={apps.thisPC.icon} alt="This PC" />
           <label>This PC</label>
         </div>
