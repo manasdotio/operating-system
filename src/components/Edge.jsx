@@ -1,6 +1,6 @@
 // src/components/Edge.jsx
 import React, { useRef, useState } from "react";
-import "./Edge/edge.css";
+import "./Edge/Edge.css";
 
 // ✅ Whitelisted domains
 const ALLOWED_DOMAINS = {
