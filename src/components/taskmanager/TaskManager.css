@@ -1,0 +1,227 @@
+.taskmanager-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  background: var(--bg-lighter, #202024);
+  color: var(--text-color, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+.tm-tabs {
+  display: flex;
+  background: var(--bg-darker, #19191c);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 12px 0;
+  gap: 4px;
+}
+
+.tm-tabs button {
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tm-tabs button:hover {
+  color: #fff;
+}
+
+.tm-tabs button.active {
+  color: #0078d4;
+  border-bottom-color: #0078d4;
+  font-weight: 600;
+}
+
+/* Process View Table */
+.tm-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tm-table-header {
+  display: grid;
+  grid-template-columns: 70px 1fr 110px 110px 100px;
+  padding: 8px 14px;
+  background: var(--bg-darker, #19191c);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.tm-process-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.tm-process-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 110px 110px 100px;
+  align-items: center;
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 12px;
+  transition: background 0.12s ease;
+}
+
+.tm-process-row:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.col-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.tm-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.status-pill {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.status-pill.run {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.status-pill.min {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.tm-btn-end {
+  padding: 4px 10px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tm-btn-end:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.tm-empty {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+}
+
+/* Performance View */
+.tm-perf-body {
+  flex: 1;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  overflow-y: auto;
+}
+
+.perf-card {
+  background: var(--bg-color, #1a1a1d);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+.perf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.perf-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.perf-val {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0078d4;
+}
+
+.perf-graph {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.graph-bar {
+  flex: 1;
+  background: linear-gradient(to top, #0078d4, #60a5fa);
+  border-radius: 2px 2px 0 0;
+  min-height: 4px;
+  transition: height 0.3s ease;
+}
+
+.perf-bar-wrap {
+  height: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.perf-bar-fill {
+  height: 100%;
+  background: #10b981;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.perf-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Status Bar */
+.tm-statusbar {
+  height: 22px;
+  background: var(--bg-darker, #161618);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tm-sep {
+  opacity: 0.3;
+}

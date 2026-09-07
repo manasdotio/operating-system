@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../utils/css/SystemTray.css";
 
-const SystemTray = ({ theme, setTheme, brightness, setBrightness, systemTray, setSystemTray }) => {
+const SystemTray = ({ theme, setTheme, brightness, setBrightness }) => {
   const [volume, setVolume] = useState(50);
 
   return (

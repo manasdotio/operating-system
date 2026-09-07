@@ -1,0 +1,251 @@
+.settings-shell {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  background: var(--bg-lighter, #242424);
+  color: var(--text-color, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+.settings-sidebar {
+  width: 230px;
+  background: var(--bg-darker, #1b1b1b);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 0.8rem;
+  gap: 1.2rem;
+}
+
+.settings-user-preview {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.4rem;
+}
+
+.settings-user-preview img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.settings-user-preview h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.settings-user-preview p {
+  margin: 0;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.settings-nav button {
+  display: flex;
+  align-items: center;
+  padding: 0.55rem 0.75rem;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.settings-nav button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.settings-nav button.active {
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+.settings-content {
+  flex: 1;
+  padding: 1.8rem 2rem;
+  overflow-y: auto;
+}
+
+.settings-section h3 {
+  font-size: 1.4rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.settings-section .subtitle {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  margin-bottom: 1.5rem;
+}
+
+.setting-card {
+  background: var(--bg-color, #2b2b2b);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.setting-card h4 {
+  margin: 0 0 0.8rem 0;
+  font-size: 0.95rem;
+}
+
+.theme-toggle-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-toggle {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.btn-toggle.selected {
+  background: #0078d4;
+  border-color: #0078d4;
+  color: #fff;
+}
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.8rem;
+}
+
+.wp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.8rem;
+  transition: border-color 0.2s;
+}
+
+.wp-card.selected {
+  border-color: #0078d4;
+}
+
+.wp-color-swatch {
+  height: 60px;
+  border-radius: 4px;
+}
+
+.range-slider {
+  width: 100%;
+  max-width: 300px;
+  accent-color: #0078d4;
+  cursor: pointer;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stat-box {
+  background: var(--bg-color, #2b2b2b);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.stat-number {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4ec9b0;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  opacity: 0.65;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.btn {
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn.primary {
+  background: #0078d4;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.btn.danger {
+  background: #d83b01;
+  color: #fff;
+}
+
+.file-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.success-msg {
+  color: #4ec9b0;
+  font-size: 0.85rem;
+  margin-top: 0.6rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.85rem;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
