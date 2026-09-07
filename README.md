@@ -4,6 +4,7 @@
 [![Tests](https://img.shields.io/badge/tests-8%20passed-success.svg)](https://github.com)
 [![React](https://img.shields.io/badge/React-19.x-blue.svg)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-7.x-646CFF.svg)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC.svg)](https://tailwindcss.com/)
 [![Vitest](https://img.shields.io/badge/Tested%20with-Vitest-yellow.svg)](https://vitest.dev/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
@@ -96,6 +97,12 @@ graph TD
 - **Camera App:** WebRTC webcam stream preview with browser permission handling.
 - **Edge Browser Clone:** Sandboxed iframe viewer with secure navigation controls.
 
+### 6. Unified Window Telemetry & Status Architecture (Tailwind CSS)
+- **OS-Level Status Bar:** Built with Tailwind CSS v4, anchoring the bottom of every running process window with an attention-to-detail micro-dashboard.
+- **Live Process Telemetry:** Animated pulsing radar dot (`animate-ping`), `PID:{win.pid}` badges, subsystem architecture tags (`VFS POSIX`, `BASH v1.2`, `EDITOR`, `TELEMETRY`), and simulated process memory footprints (`MEM: ~14.2MB`).
+- **Bi-Directional Telemetry Pipeline:** Child apps stream live telemetry into the window manager footer (e.g. cursor line/col in Notepad, folder item count in Explorer, live CPU/RAM in Task Manager).
+- **Tactile 6-Dot Resize Grip:** Native SVG diagonal corner grip inviting interactive resizing.
+
 ---
 
 ## 🛠️ Tech Stack
@@ -104,6 +111,7 @@ graph TD
 | :--- | :--- |
 | **React 19** | Core UI component framework and state synchronization |
 | **Vite 7** | Next-generation frontend build tooling and HMR |
+| **Tailwind CSS v4** | Utility-first styling for window telemetry, system footer, and HUD components |
 | **Vitest** | Blazing-fast unit test suite for VFS algorithms and path resolution |
 | **JavaScript (ES2023)** | Modern modular architecture |
 | **Sass / SCSS & CSS Modules** | Fluid Windows 11 Fluent-inspired glassmorphism styles |
@@ -153,9 +161,10 @@ npm run preview
 
 ## 📝 Resume Summary (STAR / XYZ Formula)
 
-> **Web Operating System & Window Manager** | *React 19, Vite, Vitest, JavaScript (ES2023), SCSS, GitHub Actions*
+> **Web Operating System & Window Manager** | *React 19, Vite, Tailwind CSS v4, Vitest, JavaScript (ES2023), SCSS, GitHub Actions*
 > - Architected an event-driven desktop simulation managing multi-instance process lifecycles (`PIDs`), dynamic z-index stacking contexts, a global Spotlight command palette (`Ctrl+K`), and an `Alt+Tab` application switcher.
 > - Implemented an in-browser hierarchical Virtual File System (VFS) with POSIX-style CRUD APIs, pub/sub reactive notifications, `localStorage` persistence, and HTML5 Drag-and-Drop file ingestion from host machines.
-> - Built an interactive Terminal CLI emulator featuring command history, Tab auto-completion, I/O redirection, and process termination (`kill <pid>`) communicating with the underlying window manager.
-> - Engineered an interactive Activity Monitor & Task Manager with real-time 60 FPS Canvas CPU wave simulation and browser memory telemetry, plus a Windows 11 Fluent UI File Explorer with preview panes.
+> - Engineered an OS-level window telemetry status bar with Tailwind CSS v4, displaying live process health (`animate-ping`), subsystem badges, tactile resize grips, and real-time bi-directional telemetry streaming from child applications.
+> - Built an interactive Terminal CLI emulator featuring command history, Tab auto-completion, quick-action chips, and process termination (`kill <pid>`) communicating with the underlying window manager.
+> - Engineered an interactive Activity Monitor & Task Manager with real-time 60 FPS Canvas CPU wave simulation, alongside a Windows 11 Fluent UI File Explorer with storage gauges and preview panes.
 > - Configured CI/CD automation via GitHub Actions running automated Vitest unit tests and ESLint quality gates, maintaining a 100% test pass rate across core filesystem operations.
